@@ -8,9 +8,8 @@ const NavBarPrimary = () => {
 				<li><Link to="/About">ABOUT</Link></li>
 				<li><Link to="/Locations">LOCATIONS</Link></li>
 				<li><Link to="/EndangeredSpecies">ENDAGERED SPECIES</Link></li>
-				<li><Link to="/Contact">CONTACT US</Link></li>
-				<li><Link to="/Login">LOGIN</Link></li>
-				<li><Link to="/ActNow">ACT NOW</Link></li>
+				<li><Link to="/Sign-in">SIGN IN</Link></li>
+				<li><Link to="/Sign-up">SIGN UP!</Link></li>
 			</ul>
 			</nav>
 	);
