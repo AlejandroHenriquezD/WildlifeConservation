@@ -1,31 +1,36 @@
+import MammalsList from "./AnimalLists/MammalsList"
+import ArthropodsList from "./AnimalLists/ArthropodsList"
+import AmphibiansList from "./AnimalLists/AmphibiansList"
+import BirdsList from "./AnimalLists/BirdsList"
+import FishList from "./AnimalLists/FishList"
+import ReptilesList from "./AnimalLists/ReptilesList"
 
 const Animals = () => {
     return (
       <>
       <h2>ENDANGERED ANIMALS</h2>
       <div>
-        <h3>MAMMALS</h3>
-        {/* create a card generator from the api data */ }
+      <MammalsList />
       </div>
+      <h3>ARTHROPODS</h3>
       <div>
-        <h3>ARTHROPODS</h3>
-       {/* create a card generator from the api data */ }
+        <ArthropodsList />
       </div>
+      <h3>AMPHIBIANS</h3>
       <div>
-        <h3>AMPHIBIANS</h3>
-         {/* create a card generator from the api data */ }
+        <AmphibiansList />
       </div>
+      <h3>BIRDS</h3>
       <div>
-        <h3>BIRDS</h3>
-        {/* create a card generator from the api data */ }
+        <BirdsList />
       </div>
+      <h3>FISH</h3>
       <div>
-        <h3>FISH</h3>
-        
+        <FishList />
       </div>
+      <h3>REPTILES</h3>
       <div>
-        <h3>REPTILES</h3>
-        {/* create a card generator from the api data */ }
+        <ReptilesList />
       </div>
       </>
     )
