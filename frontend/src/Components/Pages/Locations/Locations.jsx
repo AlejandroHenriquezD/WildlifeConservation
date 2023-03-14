@@ -1,11 +1,12 @@
-import LList from "./Partials/LocationList"
+
+import LocationList from "./Partials/LocationList"
 import LLP from "./Partials/Locations-LandingPage"
 
 const Locations = () => {
     return (
       <>
       <LLP />
-      <LList />
+      <LocationList />
       </>
     )
   }
