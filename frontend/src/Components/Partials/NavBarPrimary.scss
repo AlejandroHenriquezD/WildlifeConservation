@@ -1,3 +1,52 @@
+.NavBar-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.NavBar-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.NavBar-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.NavBar-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.NavBar-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.NavBar-dropdown:hover .NavBar-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.NavBar-dropdown:hover .NavBar-button {
+  background-color: #000;
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 }
@@ -8,7 +57,7 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .nav {
+  .NavBar-nav {
     background-color: transparent;
     padding: 0.7em;
     height: 5em;
@@ -17,7 +66,7 @@
     align-items: center;
   }
 
-  .ul {
+  .NavBar-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -28,7 +77,7 @@
     column-gap: 10px;
   }
 
-  .li-link {
+  .NavBar-li-link {
     color: #010101;
     text-decoration: none;
     margin-right: 0.5em;
