@@ -13,7 +13,7 @@ const LocationProvider = ({children}) => {
 			setLocationList(JSON.parse(sessionStorage.getItem('locationList')))
 		} else {
 			const getData = async () => {
-                const endpoint = "http://127.0.0.1:8000/api/locations"
+                const endpoint = "https://wildlifeconservationapp.000webhostapp.com/api/locations"
 				const result = await axios.get(endpoint)
                 setLocationList(result.data)
 				sessionStorage.setItem('locationList', JSON.stringify(result.data));

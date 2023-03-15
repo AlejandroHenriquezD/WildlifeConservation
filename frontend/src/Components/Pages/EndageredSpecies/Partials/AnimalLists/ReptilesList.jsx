@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
 export const ReptilesList = () => {
@@ -9,7 +9,7 @@ export const ReptilesList = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const endpoint = `http://127.0.0.1:8000/api/animals`
+      const endpoint = `https://wildlifeconservationapp.000webhostapp.com/api/animals`
       const result = await axios.get(endpoint)
       const filter_data = result.data.filter(x => x.type === 'reptiles')
       console.log(filter_data)
