@@ -13,7 +13,7 @@ export const LocationList = () => {
     const getData = async () => {
       const endpoint = `https://wildlifeconservationapp.000webhostapp.com/api/locations`
       const result = await axios.get(endpoint)
-
+      
       setData(result.data)
     }
     getData()
