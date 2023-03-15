@@ -10,17 +10,17 @@ import SignUp from "../Pages/Sign-Up/Sign-Up";
 
 const AppRouter = () => {
   return (
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="/About" element={<About />}></Route>
-      <Route path="/Locations" element={<Locations />}>
-        <Route index element={<LocationList/>} />
-        <Route path=":id" element={<LocationDetails />} />
-      </Route>
-      <Route path="/EndangeredSpecies" element={<Endangered />}></Route>
-      <Route path="/Sign-up" element={<SignUp />}></Route>
-      <Route path="/Sign-in" element={<SignIn />}></Route>
-    </Routes>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/About" element={<About />}></Route>
+        <Route path="/Locations" element={<Locations />}>
+          <Route index element={<LocationList />} />
+          <Route path=":id" element={<LocationDetails />} />
+        </Route>
+        <Route path="/EndangeredSpecies" element={<Endangered />}></Route>
+        <Route path="/Sign-up" element={<SignUp />}></Route>
+        <Route path="/Sign-in" element={<SignIn />}></Route>
+      </Routes>
   );
 };
 
