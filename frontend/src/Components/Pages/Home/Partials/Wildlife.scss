@@ -1,0 +1,72 @@
+.wildlife-background {
+  background-image: url("../../../../../public/Images/elephant_mobile.webp");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // max-width: 100%;
+  width: 100vw;
+
+  // height: 100%;
+  position: relative;
+  // background-position: center; /* Center the image */
+  // background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.wildlife-image-text {
+  margin-top: 1em;
+  text-align: right;
+  width: 95%;
+  height: 50%;
+  font-size: 15px;
+  color:white
+}
+
+.wildlife-arrow-down {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .wildlife-background {
+    background-image: url("../../../../Assets/Images/elephant.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    align-items: flex-end;
+    // max-width: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    // height: 100%;
+    position: relative;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .wildlife-image-text {
+    width: 95%;
+    height: 50%;
+    font-size: 18px;
+  }
+
+  .wildlife-arrow-down {
+    position: relative;
+    top: 10em;
+    align-self: center;
+    color: white;
+    height: 40%;
+    width: 5%;
+    border: 150px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

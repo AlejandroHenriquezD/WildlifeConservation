@@ -1,15 +1,18 @@
-import Impact from "./Partials/Impact"
-import Species from "./Partials/Species"
-import Wildlife from "./Partials/Wildlife"
+import Impact from "./Partials/Impact";
+import Species from "./Partials/Species";
+import Wildlife from "./Partials/Wildlife";
+import "./Home.scss";
 
 const Home = () => {
   return (
-	<>
-  <Wildlife></Wildlife>
-  <Impact></Impact>
-  <Species></Species>
-	</>
-  )
-}
+    <>
+      <div className="Home">
+        <Wildlife />
+        <Impact />
+        <Species />
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;

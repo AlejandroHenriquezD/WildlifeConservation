@@ -1,0 +1,40 @@
+.species-background{
+  padding-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  background-color: #afc6a5;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.species-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  // height: 55vh;
+  justify-content: space-evenly;
+
+}
+
+.species-list>div {
+  margin-top: 1em;
+  padding: .5em;
+}
+
+.species-text {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.species-title {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.species-img {
+  border-radius: 50%;
+  height: 6em;
+}
