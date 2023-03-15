@@ -12,7 +12,7 @@ const AnimalProvider = ({children}) => {
 			setAnimalList(JSON.parse(sessionStorage.getItem('animalList')))
 		} else {
 			const getData = async () => {
-                const endpoint = "http://127.0.0.1:8000/api/animals"
+                const endpoint = "https://wildlifeconservationapp.000webhostapp.com/api/animals"
 				const result = await axios.get(endpoint)
                 setAnimalList(result.data)
 				sessionStorage.setItem('animalList', JSON.stringify(result.data));
