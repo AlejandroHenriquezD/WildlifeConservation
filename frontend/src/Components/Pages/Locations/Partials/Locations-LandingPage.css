@@ -8,7 +8,7 @@
 .locations-background {
   background-image: url("../../../../Assets/Images/locations.jpeg");
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
@@ -24,10 +24,11 @@
   text-align: right;
   align-items: flex-end;
   font-size: 18px;
+  padding-top: 60%;
 }
 
 .locations-h1 {
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 .locations-h2 {
