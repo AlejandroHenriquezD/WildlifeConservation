@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useNavigate, useParams } from "react-router-dom"
+import LLP from "./Locations-LandingPage"
 
 
 export const LocationList = () => {
@@ -20,6 +21,7 @@ export const LocationList = () => {
 
   return (
     <>
+    <LLP />
       {data &&
         data.map((locations) => {
           return (
