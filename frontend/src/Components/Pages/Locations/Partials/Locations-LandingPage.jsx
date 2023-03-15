@@ -13,16 +13,15 @@ const LLP = () => {
             toward protecting our wildlife
           </h3>
         </div>
-      </div>
-      <BsArrowDownCircle className="arrow-down" />
-      <div>
-        <form action="#">
-          <input type="text" placeholder="Search.." />
-          <select name="animal" id="Animal">
-            <option value="filter by animal">filter by animal</option>
-            <option value="animal2">animal2</option>
-          </select>
-        </form>
+        <div className="locations-forms">
+          <form action="#">
+            <input className="locations-search" type="text" placeholder="Search..." />
+            <select className="locations-filter" name="animal" id="Animal">
+              <option value="filter by animal">filter by animal</option>
+              <option value="animal2">animal2</option>
+            </select>
+          </form>
+        </div>
       </div>
     </>
   );
