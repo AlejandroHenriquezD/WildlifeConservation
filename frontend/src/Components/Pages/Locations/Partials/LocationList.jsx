@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { useNavigate, useParams } from "react-router-dom"
 import LLP from "./Locations-LandingPage"
-
+import "./LocationList.scss"
 
 export const LocationList = () => {
   const [data, setData] = useState([])
@@ -25,9 +25,9 @@ export const LocationList = () => {
       {data &&
         data.map((locations) => {
           return (
-            <div key={locations.id} onClick={() => navigate(`/Locations/${locations.id}`)}>
+            <div key={locations.id} onClick={() => navigate(`/Location/${locations.id}`)}>
               <figure>
-                  <img src={locations.img} alt={locations.short_description} />
+                  <img src={"https://wildlifeconservationapp.000webhostapp.com/"+locations.img} alt={locations.short_description}/>
               </figure>
               <div>
               <h2>

@@ -20,11 +20,11 @@ const NavBarPrimary = () => {
     <div className="NavBar-dropdown">
       <button className="NavBar-button"><AiOutlineMenu/></button>
       <div className="NavBar-content">
-        <a href="about">ABOUT</a>
-        <a href="Locations">LOCATIONS </a>
-        <a href="EndangeredSpecies">ENDAGERED SPECIES </a>
-				<a href="Login">LOGIN </a>
-				<a href="Login">SIGN UP</a>
+        <a href="/about">ABOUT</a>
+        <a href="/Locations">LOCATIONS </a>
+        <a href="/EndangeredSpecies">ENDAGERED SPECIES </a>
+				<a href="/Login">LOGIN </a>
+				<a href="/Login">SIGN UP</a>
       </div>
     </div>
   );

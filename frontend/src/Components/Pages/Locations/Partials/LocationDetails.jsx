@@ -8,6 +8,10 @@ export const LocationDetails = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
 
+  // document.getElementById("demo").innerHTML =
+  // "Page location is " + window.location.href;
+  console.log("Here "+window.location.href);
+
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
