@@ -16,10 +16,10 @@ const LLP = () => {
         <div className="locations-forms">
           <form action="#">
             <input className="locations-search" type="text" placeholder="Search..." />
-            <select className="locations-filter" name="animal" id="Animal">
+            {/* <select className="locations-filter" name="animal" id="Animal">
               <option value="filter by animal">filter by animal</option>
               <option value="animal2">animal2</option>
-            </select>
+            </select> */}
           </form>
         </div>
       </div>

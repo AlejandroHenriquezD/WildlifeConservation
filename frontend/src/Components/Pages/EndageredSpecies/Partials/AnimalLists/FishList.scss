@@ -1,0 +1,23 @@
+.FishList-img {
+  border-radius: 30%;
+  height: 6em;
+}
+
+.FishList-text{
+  font-size: 1em;
+}
+
+.FishList-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  // height: 55vh;
+  justify-content: flex-start;
+  padding-left: .5em;
+}
+
+.FishList-figure {
+  margin-top: 1em;
+  padding: .5em;
+}

@@ -1,11 +1,11 @@
 import Animals from "./Partials/Animals"
-import Species from "./Partials/SpeciesLandingpage"
+import SpeciesLanding from "./Partials/SpeciesLandingpage"
 
 
 const Endangered = () => {
   return (
 	<>
-    <Species />
+    <SpeciesLanding />
     <Animals />
 	</>
   )

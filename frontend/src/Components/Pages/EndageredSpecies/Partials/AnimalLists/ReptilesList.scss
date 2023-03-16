@@ -1,0 +1,24 @@
+.ReptileList-img {
+  border-radius: 30%;
+  height: 6em;
+}
+
+.ReptileList-text{
+  font-size: 1em;
+}
+
+.ReptileList-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  // height: 55vh;
+  justify-content: flex-start;
+  padding-left: .5em;
+  
+}
+
+.ReptileList-figure {
+  margin-top: 1em;
+  padding: .5em;
+}

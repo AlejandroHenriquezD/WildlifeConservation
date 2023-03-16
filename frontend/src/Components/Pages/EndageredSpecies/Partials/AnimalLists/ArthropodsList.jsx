@@ -1,40 +1,45 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
-import { useParams } from "react-router-dom"
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
+import "./ArthropodsList.scss";
 
 export const ArthropodsList = () => {
-  const [data, setData] = useState([])
-  let { type } = useParams({ type: 'arthropods' })
+  const [data, setData] = useState([]);
+  let { type } = useParams({ type: "arthropods" });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
-      const endpoint = `https://wildlifeconservationapp.000webhostapp.com/api/animals`
-      const result = await axios.get(endpoint)
-      const filter_data = result.data.filter(x => x.type === 'arthropods')
-      console.log(filter_data)
-      setData(filter_data)
-    }
-    getData()
-  }, [type])
+      const endpoint = `https://wildlifeconservationapp.000webhostapp.com/api/animals`;
+      const result = await axios.get(endpoint);
+      const filter_data = result.data.filter((x) => x.type === "Arthropod");
+      console.log(filter_data);
+      setData(filter_data);
+    };
+    getData();
+  }, [type]);
 
   return (
     <>
-      {data &&
-        data.map((animals) => {
-          return (
-            <div key={animals.id}>
-              <figure>
-              <p>
-                  {animals.name}
-              </p> 
-                  <img src={animals.img} alt={animals.short_description} />
-              </figure>
-            </div>
-          )
-        })}
+      <div className="ArthropodList-container">
+        {data &&
+          data.map((animals) => {
+            return (
+              <div key={animals.id}
+              onClick={() => navigate(`/Animals/${animals.id}`)}>
+                <figure className="ArthropodList-figure">
+                  <p className="ArthropodList-text">{animals.name}</p>
+                  <img
+                    className="ArthropodList-img "
+                    src={animals.img}
+                    alt={animals.short_description}
+                  />
+                </figure>
+              </div>
+            );
+          })}
+      </div>
     </>
-  )
-  
-}
-export default ArthropodsList
+  );
+};
+export default ArthropodsList;
