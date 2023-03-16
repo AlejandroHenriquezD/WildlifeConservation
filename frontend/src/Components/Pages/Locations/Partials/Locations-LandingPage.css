@@ -49,12 +49,14 @@
 }
 
 .locations-filter {
-  padding: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 25px;
 }
 
 .locations-search {
-  padding: 0.3rem;
+  padding: 0.5rem;
   margin-right: 3rem;
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=Locations-LandingPage.css.map */
