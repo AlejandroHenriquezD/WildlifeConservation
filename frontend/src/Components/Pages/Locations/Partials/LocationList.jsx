@@ -33,16 +33,16 @@ export const LocationList = () => {
               <figure className="locations-figure">
                 <img
                   className="locations-img"
-                  src={"https://wildlifeconservationapp.000webhostapp.com/"+locations.img}
+                  src={locations.img}
                   alt={locations.short_description}
                 />
               </figure>
               <div className="locations-info">
                 <h2 className="locations-name">{locations.name}</h2>
                 <h3 className="locations-country">{locations.country}</h3>
-                <p className="locations-description">
+                {/* <p className="locations-description">
                   {locations.long_description}
-                </p>
+                </p> */}
               </div>
             </div>
           );
