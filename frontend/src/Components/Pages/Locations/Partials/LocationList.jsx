@@ -23,9 +23,9 @@ export const LocationList = () => {
       {data &&
         data.map((locations) => {
           return (
-            <div key={locations.id} onClick={() => navigate(`/Locations/${locations.id}`)}>
+            <div className="locations-container" key={locations.id} onClick={() => navigate(`/Locations/${locations.id}`)}>
               <figure>
-                  <img src={locations.img} alt={locations.short_description} />
+                  <img className="locations-img" src={locations.img} alt={locations.short_description} />
               </figure>
               <div>
               <h2>
