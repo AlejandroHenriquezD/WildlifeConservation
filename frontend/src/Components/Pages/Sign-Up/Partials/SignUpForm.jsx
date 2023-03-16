@@ -26,9 +26,11 @@
 
 //   export default SignUpForm
 
+
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./SignUpForm";
 
 const endpoint2 =
   "https://wildlifeconservationapp.000webhostapp.com/api/register";
@@ -58,55 +60,56 @@ const SignUpForm = () => {
         <div class="container">
           <h2>SIGN UP!</h2>
           <p>Sign up and start helping endagered species today!</p>
-
-          <label for="Name">
-            <b>Name</b>
-          </label>
-          <div className="signUp-form">
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              type="text"
-              placeholder="Name"
-              name="Name"
-              required
-            />
-
-            <label for="Username">
-              <b>Choose an Email</b>
+          <div className="signIn-form">
+            <label for="Name">
+              <b>Name</b>
             </label>
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="Username"
-              placeholder="Username"
-              name="Username"
-              required
-            />
+            <div className="signUp-form">
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+                placeholder="Name"
+                name="Name"
+                required
+              />
 
-            <label for="psw">
-              <b>Choose a Password</b>
-            </label>
-            <input
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              placeholder="Password"
-              name="psw"
-              required
-            />
+              <label for="Username">
+                <b>Choose an Email</b>
+              </label>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="Username"
+                placeholder="Username"
+                name="Username"
+                required
+              />
 
-            <label for="psw">
-              <b>Confirm Password</b>
-            </label>
-            <input
-              value={confirm_password}
-              onChange={(e) => setConfirm(e.target.value)}
-              type="password"
-              placeholder="Password"
-              name="confirmpsw"
-              required
-            />
+              <label for="psw">
+                <b>Choose a Password</b>
+              </label>
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                placeholder="Password"
+                name="psw"
+                required
+              />
+
+              <label for="psw">
+                <b>Confirm Password</b>
+              </label>
+              <input
+                value={confirm_password}
+                onChange={(e) => setConfirm(e.target.value)}
+                type="password"
+                placeholder="Password"
+                name="confirmpsw"
+                required
+              />
+            </div>
           </div>
           <div class="clearfix">
             <button type="submit" class="signupbtn">
