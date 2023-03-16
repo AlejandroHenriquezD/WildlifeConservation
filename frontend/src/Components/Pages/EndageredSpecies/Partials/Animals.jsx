@@ -9,6 +9,7 @@ const Animals = () => {
     return (
       <>
       <h2>ENDANGERED ANIMALS</h2>
+      <h3>MAMMALS</h3>
       <div>
       <MammalsList />
       </div>
