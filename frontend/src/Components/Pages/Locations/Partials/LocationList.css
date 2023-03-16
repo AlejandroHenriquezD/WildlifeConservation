@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -7,38 +6,40 @@
 }
 
 .locations-container {
-    display: flex;
-    height: 120px;
+  display: flex;
+  height: 120px;
 }
 
 .locations-container:nth-child(2n) {
-    background-color: white;
+  background-color: white;
 }
 
 .locations-container:nth-child(2n-1) {
-    background-color: #AFC6A5;
+  background-color: #AFC6A5;
 }
 
 .locations-figure {
-    max-width: 25%;
-    margin-right: 5%;
+  max-width: 25%;
+  margin-right: 5%;
 }
 
 .locations-img {
-    width: 100%;
+  width: 100%;
 }
 
 .locations-name {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .locations-country {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .locations-description {
-    font-size: 1rem;
-    font-weight: 200;
+  font-size: 1rem;
+  font-weight: 200;
 }
+
+/*# sourceMappingURL=LocationList.css.map */
