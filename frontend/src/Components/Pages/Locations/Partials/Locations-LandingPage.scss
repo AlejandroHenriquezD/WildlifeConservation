@@ -6,15 +6,15 @@
   font-family: "Poppins", sans-serif;
 }
 
-  .locations-background {
-    background-image: url("../../../../Assets/Images/locations.jpeg");
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    position: relative;
-    background-size: cover; 
-  }
+.locations-background {
+  background-image: url("../../../../Assets/Images/locations.jpeg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+}
 
 .locations-image-text {
   color: white;
@@ -44,18 +44,85 @@
 }
 
 .locations-forms {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .locations-filter {
-    padding: 0.5rem;
-    border-radius: 25px;
+  padding: 0.5em;
+  border-radius: 25px;
 }
 
 .locations-search {
+  padding: 0.5em;
+  margin-right: 1.5em;
+  border-radius: 25px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .locations-background {
+    background-image: url("../../../../Assets/Images/locations.jpeg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    align-items: flex-end;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }
+
+  .locations-image-text {
+    padding-top: 20%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+  }
+
+  .locations-h1 {
+    font-size: 6rem;
+  }
+  
+  .locations-h2 {
+    font-size: 2rem;
+  }
+  
+  .locations-h3 {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  
+  .locations-forms {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+  }
+  
+  .locations-filter {
+    padding: 0.5rem;
+    border-radius: 25px;
+    width: 14em;
+    height: 3em;
+  }
+  
+  .locations-search {
     padding: 0.5rem;
     margin-right: 3rem;
     border-radius: 25px;
+    width: 20em;
+    height: 2em;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
