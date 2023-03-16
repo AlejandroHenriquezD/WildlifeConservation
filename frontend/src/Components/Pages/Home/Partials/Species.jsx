@@ -1,5 +1,4 @@
 //* thinking we can just make a card generated picture with text from the data base
-import React, { useEffect, useState } from "react";
 import "./Species.scss";
 
 const Species = () => {
@@ -61,12 +60,13 @@ const Species = () => {
         <h2 className="species-title">ENDANGERED SPECIES</h2>
 
         <div className="species-list">
-          {types.map((type) => (
-            <div>
+          {types.map((type, index) => (
+            <div key={index}>
               <p className="species-text">{type.type}</p>
               <img
                 src={`Images/Species/${type.img}.jpg`}
                 className="species-img"
+                alt=""
               />
             </div>
           ))}
