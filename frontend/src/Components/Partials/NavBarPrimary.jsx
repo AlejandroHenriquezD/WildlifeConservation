@@ -23,8 +23,8 @@ const NavBarPrimary = () => {
         <a href="/about">ABOUT</a>
         <a href="/Locations">LOCATIONS </a>
         <a href="/EndangeredSpecies">ENDAGERED SPECIES </a>
-				<a href="/Login">LOGIN </a>
-				<a href="/Login">SIGN UP</a>
+				<a href="/Sign-in">LOGIN </a>
+				<a href="/Sign-up">SIGN UP</a>
       </div>
     </div>
   );
