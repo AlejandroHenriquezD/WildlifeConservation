@@ -11,7 +11,7 @@ export const BirdsList = () => {
     const getData = async () => {
       const endpoint = `https://wildlifeconservationapp.000webhostapp.com/api/animals`
       const result = await axios.get(endpoint)
-      const filter_data = result.data.filter(x => x.type === 'birds')
+      const filter_data = result.data.filter(x => x.type === 'Birds')
       console.log(filter_data)
       setData(filter_data)
     }

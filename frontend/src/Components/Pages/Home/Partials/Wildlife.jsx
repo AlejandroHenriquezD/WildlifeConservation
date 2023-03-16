@@ -11,8 +11,8 @@ const Wildlife = () => {
             WILDLIFE <br /> CONSERVATION
           </h1>
           <h3>
-            Wildlife conservation aims to protect plant <br /> and animal
-            species as the human <br /> population encroaches on their resources
+            Wildlife conservation aims to protect plant and animal
+            species as the human population encroaches on their resources
           </h3>
         </div>
         <BsArrowDownCircle className="wildlife-arrow-down"/>

@@ -1,5 +1,5 @@
 .NavBar-button {
-  background-color: #4caf50;
+  background-color: transparent;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -13,19 +13,24 @@
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .NavBar-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
+  background-color: #212529;
+  min-width: 5em;
+  min-height: 10em;
+  right: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  padding: 1em;
 }
 
 /* Links inside the dropdown */
 .NavBar-content a {
   color: black;
+  color: #f9f9f9;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -36,15 +41,16 @@
   background-color: #f1f1f1;
 }
 
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.NavBar-dropdown:hover .NavBar-button {
+  background-color: #000;
+}
+
 /* Show the dropdown menu on hover */
 .NavBar-dropdown:hover .NavBar-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.NavBar-dropdown:hover .NavBar-button {
-  background-color: #000;
-}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

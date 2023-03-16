@@ -7,7 +7,7 @@ const Locations = () => {
   return (
     <>
       <div className="Locations">
-        <LLP />
+        {/* <LLP /> */}
         <Outlet />
       </div>
     </>

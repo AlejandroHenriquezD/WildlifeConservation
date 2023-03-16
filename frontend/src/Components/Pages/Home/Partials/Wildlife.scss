@@ -14,12 +14,17 @@
 }
 
 .wildlife-image-text {
-  margin-top: 1em;
   text-align: right;
   width: 95%;
   height: 50%;
   font-size: 15px;
-  color:white
+  color:white;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.wildlife-image-text>h1 {
+  padding-bottom: 1em;
 }
 
 .wildlife-arrow-down {
