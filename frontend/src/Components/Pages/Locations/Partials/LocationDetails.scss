@@ -1,3 +1,25 @@
-.locationDetails-img{
+.locationDetails-img {
   width: 100%;
+}
+
+.locationDetails-protecting {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+
+  justify-content: flex-start;
+}
+
+.locationDetails-protecting-text {
+  text-align: center;
+  font-size: 1em;
+}
+
+
+.locationDetails-protecting-img {
+  border-radius: 50%;
+  height: 6em;
+  margin-right: .5em;
+  // padding-right: .5em;
 }

@@ -5,27 +5,27 @@ const Species = () => {
   let types = [
     {
       type: "Arthropods",
-      img: "butterfly",
+      img: "ARTHROPODS",
     },
     {
       type: "Mammals",
-      img: "lion",
+      img: "MAMMALS",
     },
     {
       type: "Ampbhibians",
-      img: "frog",
+      img: "AMPHIBIANS",
     },
     {
       type: "Reptiles",
-      img: "lizard",
+      img: "REPTILES",
     },
     {
       type: "Fish",
-      img: "fish",
+      img: "FISH",
     },
     {
       type: "Birds",
-      img: "bird",
+      img: "BIRDS",
     },
 
     {
@@ -50,7 +50,7 @@ const Species = () => {
     },
     {
       type: "See all",
-      img: "bird",
+      img: "ARTHROPODS",
     },
   ];
 
