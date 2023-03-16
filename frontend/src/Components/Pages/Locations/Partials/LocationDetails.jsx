@@ -2,79 +2,103 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./DetailsSlider.scss";
+import "./LocationDetails.scss";
 
 export const LocationDetails = () => {
-  console.log("details");
+  const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const { id } = useParams();
-
-  // document.getElementById("demo").innerHTML =
-  // "Page location is " + window.location.href;
-  console.log("Here "+window.location.href);
-
+  // let taggi = useRef();
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
         `https://wildlifeconservationapp.000webhostapp.com/api/location/${id}`
       );
       setData(result.data);
-      console.log(result.data);
+      setLoading(false);
+      console.log(result.data.tags);
     };
     getData();
+    // getData();
   }, [id, setData]);
+
+  // const getData = () => {
+  //   axios.get( `https://wildlifeconservationapp.000webhostapp.com/api/location/${id}`).then((response) => {
+  //     setData(response.data);
+  //     setLoading(false);
+  //   });
+  // };
 
   return (
     <>
-      {data ? (
+      {!isLoading ? (
         <div key={data.id}>
           <div>
             <h1>{data.name}</h1>
-            <h3>{data.short_description}</h3>
-            <button>make arrow down button</button>
+            {/* <h3>{data.short_description}</h3> */}
+            {/* <button>make arrow down button</button> */}
           </div>
           <figure>
-            <img src={data.img} alt={data.name} />
+            <img
+              src={data.img}
+              alt={data.name}
+              className="locationDetails-img"
+            />
           </figure>
+          <div>
+            <h2>PROTECTING</h2>
+            <h6>
+              <div className="locationDetails-protecting">
+                {JSON.parse(data.tags).map((t, index) => {
+                  return (
+                    <div  key={index}>
+                      <img className="locationDetails-protecting-img" src={`/Images/Species/${t}.jpg`} alt="" />
+                      <p className="locationDetails-protecting-text">{t}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </h6>
+          </div>
           <div>
             <h2>ABOUT</h2>
             <p>{data.long_description}</p>
-            <h2>RATE US!</h2>
           </div>
           <div>
             <section id="slider">
-              <input type="radio" name="slider" id="s1" onChange={""} />
+              <input type="radio" name="slider" id="s1" />
               <input type="radio" name="slider" id="s2" />
               <input type="radio" name="slider" id="s3" />
               <input type="radio" name="slider" id="s4" />
               <input type="radio" name="slider" id="s5" />
 
-              <label for="s1" id="slide1">
+              <label htmlFor="s1" id="slide1">
                 <img
                   src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   alt=""
                 />
               </label>
-              <label for="s2" id="slide2">
+              <label htmlFor="s2" id="slide2">
                 <img
-                  src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  src="https://media.cnn.com/api/v1/images/stellar/prod/220320181933-01-rare-snake-alabama-handout.jpg?c=original"
                   alt=""
                 />
               </label>
-              <label for="s3" id="slide3">
+              <label htmlFor="s3" id="slide3">
                 <img
-                  src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/306062281/1800"
                   alt=""
                 />
               </label>
-              <label for="s4" id="slide4">
+              <label htmlFor="s4" id="slide4">
                 <img
-                  src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  src="https://cdn.britannica.com/37/75637-050-B425E8F1/Killer-whale.jpg"
                   alt=""
                 />
               </label>
-              <label for="s5" id="slide5">
+              <label htmlFor="s5" id="slide5">
                 <img
-                  src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  src="https://i.natgeofe.com/k/a42a2dd2-b777-4d84-890d-0f604db36781/spotted-salamander-closeup_4x3.jpg"
                   alt=""
                 />
               </label>
@@ -86,7 +110,6 @@ export const LocationDetails = () => {
           <br />
         </div>
       )}
-      );
     </>
   );
 };
