@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
-import { useNavigate, useParams } from "react-router-dom"
-import LLP from "./Locations-LandingPage"
-import "./LocationList.scss"
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
+import LLP from "./Locations-LandingPage";
+import "./LocationList.scss";
 
 export const LocationList = () => {
   const [data, setData] = useState([]);
@@ -15,38 +15,47 @@ export const LocationList = () => {
       const result = await axios.get(endpoint);
 
       setData(result.data);
+      console.log(result.data);
     };
     getData();
   }, [type]);
 
   return (
     <>
-    <LLP />
-      {data &&
-        data.map((locations) => {
-          return (
-            <div
-              className="locations-container"
-              key={locations.id}
-              onClick={() => navigate(`/Locations/${locations.id}`)}
-            >
-              <figure className="locations-figure">
-                <img
-                  className="locations-img"
-                  src={locations.img}
-                  alt={locations.short_description}
-                />
-              </figure>
-              <div className="locations-info">
-                <h2 className="locations-name">{locations.name}</h2>
-                <h3 className="locations-country">{locations.country}</h3>
-                {/* <p className="locations-description">
-                  {locations.long_description}
-                </p> */}
+      <LLP />
+      <div className="location-container">
+        {data &&
+          data.map((location) => {
+            return (
+              <div
+                className="location-list-container"
+                key={location.id}
+                onClick={() => navigate(`/Locations/${location.id}`)}
+              >
+                <figure className="location-figure">
+                  <img
+                    className="location-img"
+                    src={location.img}
+                    alt={location.name}
+                  />
+                </figure>
+                <div className="location-info">
+                  <h2 className="location-name">{location.name}</h2>
+                  <h3 className="location-country">{location.country}</h3>
+                  <div className="location-tag-container">
+                    {JSON.parse(location.tags).map((t, index) => {
+                      return (
+                        <span className="location-tag" key={index}>
+                          {t}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+      </div>
     </>
   );
 };
