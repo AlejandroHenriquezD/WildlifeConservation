@@ -5,24 +5,33 @@ import "./DetailsSlider.scss";
 import "./LocationDetails.scss";
 
 export const LocationDetails = () => {
+  const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const { id } = useParams();
-
+  // let taggi = useRef();
   useEffect(() => {
-    const getData =
-    (async () => {
+    const getData = async () => {
       const result = await axios.get(
         `https://wildlifeconservationapp.000webhostapp.com/api/location/${id}`
       );
       setData(result.data);
+      setLoading(false);
       console.log(result.data.tags);
-    });
+    };
     getData();
+    // getData();
   }, [id, setData]);
+
+  // const getData = () => {
+  //   axios.get( `https://wildlifeconservationapp.000webhostapp.com/api/location/${id}`).then((response) => {
+  //     setData(response.data);
+  //     setLoading(false);
+  //   });
+  // };
 
   return (
     <>
-      {data ? (
+      {!isLoading ? (
         <div key={data.id}>
           <div>
             <h1>{data.name}</h1>
@@ -37,11 +46,18 @@ export const LocationDetails = () => {
             />
           </figure>
           <div>
-            {/* <h2>Tags</h2> */}
+            <h2>PROTECTING</h2>
             <h6>
-              {/* {JSON.parse(data.tags).map((t, index) => {
-                return <p key={index}>{t}</p>;
-              })} */}
+              <div className="locationDetails-protecting">
+                {JSON.parse(data.tags).map((t, index) => {
+                  return (
+                    <div  key={index}>
+                      <img className="locationDetails-protecting-img" src={`/Images/Species/${t}.jpg`} alt="" />
+                      <p className="locationDetails-protecting-text">{t}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </h6>
           </div>
           <div>
