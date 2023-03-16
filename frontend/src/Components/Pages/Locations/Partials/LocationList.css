@@ -6,7 +6,40 @@
 }
 
 .locations-container {
+  display: flex;
+  height: 120px;
+}
+
+.locations-container:nth-child(2n) {
+  background-color: white;
+}
+
+.locations-container:nth-child(2n-1) {
   background-color: #AFC6A5;
+}
+
+.locations-figure {
+  max-width: 25%;
+  margin-right: 5%;
+}
+
+.locations-img {
+  width: 100%;
+}
+
+.locations-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.locations-country {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.locations-description {
+  font-size: 1rem;
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=LocationList.css.map */
