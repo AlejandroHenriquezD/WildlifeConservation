@@ -23,11 +23,11 @@ const Footer = () => {
       </div>
 
       <div className="footer-links">
-        <li>
+        {/* <li>
           <Link to="/About" className="footer-li-link">
             ABOUT
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/Locations" className="footer-li-link">
             LOCATIONS
